@@ -1,6 +1,14 @@
 [package]
-name = "static-server"
-version = "0.1.0"
+name = "http-static"
+version = "1.0.0"
+authors = ["Ivan Davydov davydoff33@yandex.ru"]
+license = "MIT"
+description = "Simple HTTP server written on rust with the main purpose is to serve static files."
+readme = "README.md"
+homepage = "https://github.com/IDSaves/simple-rust-http-server"
+repository = "https://github.com/IDSaves/simple-rust-http-server"
+keywords = ["cli", "static-server"]
+categories = ["command-line-utilities"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

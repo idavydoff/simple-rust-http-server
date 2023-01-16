@@ -10,21 +10,23 @@ use clap::Parser;
 #[derive(Parser)]
 struct Args {
    // Index file which will be returned on "/" route
-   #[arg(short, long)]
+   #[arg(short, long, help = "Index file which will be returned on \"/\" route (Default is index.html)")]
    index: Option<String>,
 
    // Serving directory
-   #[arg(short, long)]
+   #[arg(short, long, help = "Serving directory (Default is current)")]
    dir: Option<String>,
 
    // Port on which the socket will be binded
-   #[arg(short, long)]
+   #[arg(short, long, help = "Port on which the socket will be binded")]
    port: u16
 }
 
 fn main() -> Result<()>{
     let args = Arc::new(Args::parse());
     let listener = TcpListener::bind(format!("127.0.0.1:{}", args.port))?;
+
+    println!("Static server is running on port {}", args.port);
 
     for con in listener.incoming() {
         handle_stream(con?, args.clone());

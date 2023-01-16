@@ -88,6 +88,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "http-static"
+version = "1.0.0"
+dependencies = [
+ "clap",
+ "mime_guess",
+]
+
+[[package]]
 name = "io-lifetimes"
 version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -203,14 +211,6 @@ dependencies = [
  "libc",
  "linux-raw-sys",
  "windows-sys",
-]
-
-[[package]]
-name = "static-server"
-version = "0.1.0"
-dependencies = [
- "clap",
- "mime_guess",
 ]
 
 [[package]]
